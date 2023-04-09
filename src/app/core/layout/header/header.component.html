@@ -1,0 +1,33 @@
+<div class="header-wrapper">
+    <app-icon [icon]="'assets/images/shared/arrow-left.svg'" [ngClass]="{ toggle: !toggle }" (onClick)="toggleClick()"
+        [title]="'toggle'"></app-icon>
+    <div class="customer-config">
+        <div class="language">
+            <div [matMenuTriggerFor]="menu" class="menu-toggler">
+                <p class="medium-14">{{ selectedLanguage }}</p>
+                <img src="assets/images/shared/arrow-bottom.svg" alt="hala arrow-bottom">
+            </div>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <p class="medium-14">English</p>
+                </button>
+                <button mat-menu-item>
+                    <p class="medium-14">عربي</p>
+                </button>
+            </mat-menu>
+        </div>
+        <div class="icon-wrapper">
+            <app-icon [icon]="'assets/images/shared/notification.svg'" [title]="'notification'"></app-icon>
+        </div>
+        <div class="profile-data">
+            <div class="avatar"></div>
+            <div class="customer-info">
+                <p class="customer-name">Esam Alnahdi</p>
+                <p class="regular-14">Hala Company</p>
+            </div>
+            <div class="status ">
+                <p class="caption"> Starter</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+@use '../../../../theme/varibales' as varibales;
+
+.slide-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 12px 0 12px;
+    gap: 10px;
+    width: 232px;
+    background: #FFFFFF;
+    height: 100%;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+
+    .logo {
+        margin-inline-start: 16px;
+        margin-bottom: 16px;
+        -webkit-transition: width 200ms ease-out;
+        -moz-transition: width 200ms ease-out;
+        -o-transition: width 200ms ease-out;
+        transition: width 200ms ease-out;
+    }
+
+    &.toggled {
+        width: 65px;
+
+        .logo {
+            width: 40px;
+            margin-inline-start: 0px;
+        }
+    }
+
+    hr {
+        background-color: varibales.$color_tertiary200;
+        height: 1px;
+        border: 0;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 24px;
+        width: 100%;
+
+        &.no-padding {
+            padding-top: 0 !important;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 12px;
+
+
+
+            &.selected,
+            &:hover>app-icon {
+                outline: 1px solid #009877;
+                border-radius: 15px;
+                ::ng-deep img {
+                    filter: invert(41%) sepia(94%) saturate(469%) hue-rotate(118deg) brightness(91%) contrast(101%);
+                }
+            }
+        }
+    }
+}

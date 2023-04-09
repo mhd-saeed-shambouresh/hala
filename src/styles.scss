@@ -1,0 +1,125 @@
+@use '@angular/material' as mat;
+@use './theme/varibales' as varibales;
+@use './theme/theme' as theme;
+@use 'swiper/scss';
+@use "swiper/css/pagination";
+@include mat.core();
+@include mat.all-component-themes(theme.$my-theme);
+@include mat.all-component-typographies(theme.$my-typography);
+
+@font-face {
+  font-family: 'OCR';
+  src: url('/assets/fonts/OCR-A Regular.ttf') format("truetype");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+
+
+p {
+  margin: 0 !important;
+
+  &.gray {
+    color: varibales.$color_dark;
+  }
+
+  &.medium-14 {
+    @include mat.typography-level(theme.$my-typography, 'medium');
+  }
+
+  &.medium-15 {
+    @include mat.typography-level(theme.$my-typography, 'medium');
+    font-size: 15px;
+  }
+
+  &.regular-12 {
+    @include mat.typography-level(theme.$my-typography, 'regular');
+  }
+
+  &.regular-13 {
+    @include mat.typography-level(theme.$my-typography, 'regular');
+    font-size: 13px;
+  }
+
+  &.regular-14 {
+    @include mat.typography-level(theme.$my-typography, 'regular');
+    font-size: 14px;
+  }
+
+  &.caption {
+    @include mat.typography-level(theme.$my-typography, 'caption');
+  }
+}
+
+
+
+html,
+body {
+  background-color: varibales.$color_tertiary200 !important;
+  min-height: 100vh !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: auto !important;
+}
+
+app-root {
+  min-height: 100vh !important;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+
+  &:hover {
+    color: unset;
+  }
+}
+
+.mat-mdc-tab .mdc-tab__text-label,
+.mat-mdc-tab-link .mdc-tab__text-label {
+  color: rgba(0, 0, 0, 1);
+}
+
+.mat-mdc-tab-label-container {
+  border-bottom: 2px solid #F8FAFC;
+}
+
+.mat-mdc-tab-group {
+  max-width: 90% !important;
+ 
+
+}
+.mat-mdc-tab-label-container{
+  position: relative;
+  pointer-events: all;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(100% - 90px);
+    right: 0;
+    height: 100%;
+    width: 100px;
+    background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: all;
+  }
+  &::before {
+    z-index: 999;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 90px;
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: all;
+  }
+}

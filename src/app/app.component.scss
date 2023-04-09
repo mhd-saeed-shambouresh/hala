@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.body{
+    width: 100%;
+    overflow: auto;
+    padding: 0px 20px;
+}

@@ -1,0 +1,11 @@
+<div class="cards" *ngIf="cards$ | async as cards">
+    <app-card>
+        <div class="title">
+            <h4>All Cards</h4>
+            <p class="medium-14 gray">Manage Cards</p>
+        </div>
+        <div class="cards-warpper">
+            <app-mada-card [card]="card" *ngFor="let card of cards"></app-mada-card>
+        </div>
+    </app-card>
+</div>

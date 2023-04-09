@@ -1,0 +1,80 @@
+
+//Colors
+$color_tertiary100: #F8FAFC;
+$color_tertiary200: #F1F5F9;
+$color_tertiary600: #475569;
+$color_primary  :#FFFFFF;
+$color_accent:#009877;
+$color_blue:#006FC7;
+$color_titkes:#0F172A;
+$color_dark: #64748B;
+$color_warn:#ec4848;
+
+
+$primary: (
+    50 : $color_primary,
+    100 : #fafafa,
+    200 : #f5f5f5,
+    300 : #f0f0f0,
+    400 : #dedede,
+    500 : #c2c2c2,
+    600 : #979797,
+    700 : #818181,
+    800 : #606060,
+    900 : #3c3c3c,
+    contrast: (50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff, )
+);
+
+$accent: (
+    50 : #e0f3ef,
+    100 : #b3e0d6,
+    200 : #80ccbb,
+    300 : #4db7a0,
+    400 : #26a78b,
+    500 : $color_accent,
+    600 : #00906f,
+    700 : #008564,
+    800 : #007b5a,
+    900 : #006a47,
+    A100 : #99ffd7,
+    A200 : #66ffc3,
+    A400 : #33ffb0,
+    A700 : #1affa6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+;
+
+//Fonts
+$font-family: 'IBM Plex Sans', sans-serif;
+
+
+//Screen BreakPoint
+$screen-xs: 575px;
+$screen-sm: 767px;
+$screen-md: 991px;
+$screen-lg: 1199px;
+$screen-xl: 1501px;

@@ -1,0 +1,37 @@
+<div class="box" [ngStyle]="{'border-left-color': card.color}">
+    <div class="card-detail">
+        <div class="card-title">
+            <p class="regular-13">{{card.title}}</p>
+            <p class="regular-12 gray">{{card.subTitle}}</p>
+        </div>
+        <div class="balance">
+            <p class="balance-amount">{{card.balance| number: '1.2-2'}}<span>SAR</span></p>
+            <p class="regular-12 gray" style="text-align: center;">Card Balance</p>
+        </div>
+    </div>
+    <div class="card-img">
+        <div class="bank-card">
+            <div class="bank-card-title">
+                <img src="assets/images/shared/logo.svg" alt="hala-logo" class="logo" />
+                <img src="assets/images/shared/hala-sign.svg" alt="hala-sign" class="sign">
+            </div>
+            <div class="logos">
+                <div class="logo">
+                    <img src="assets/images/shared/tow-line.svg">
+                    <img class="nfc" src="assets/images/shared/nfc.svg">
+                </div>
+                <div class="logo">
+                    <img class="mada" src="assets/images/shared/mada.svg">
+                </div>
+            </div>
+            <div class="footer">
+                <p class="number">{{card.cardNumber}}</p>
+                <img src="assets/images/shared/visa.svg" alt="visa" srcset="">
+            </div>
+        </div>
+        <div class="validity">
+            <p class="regular-12 label">VALID THRU</p>
+            <p class="regular-12 bold">{{card.validUntil | date :'MM/YY' :'UTC'}}</p>
+        </div>
+    </div>
+</div>

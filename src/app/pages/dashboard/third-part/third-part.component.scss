@@ -1,0 +1,92 @@
+@use '../../../../theme/varibales' as varibales;
+
+.tabs {
+    display: flex;
+    min-width: 0px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .medium-14 {
+        color: #0F172A !important;
+    }
+
+    hr {
+        background-color: varibales.$color_tertiary200;
+        height: 1px;
+        border: 0;
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+.detail {
+    display: flex;
+    width: 100%;
+
+    .left-part {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .canv-box {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    .right-part {
+        flex: 1;
+
+        .items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .item {
+                display: flex;
+                justify-content: space-between;
+
+                .title-box {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    align-items: center;
+
+                    .point {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 2px 4px;
+                        gap: 10px;
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid #FFFFFF;
+                        border-radius: 20px;
+
+                    }
+
+                    .title-detail {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px 0px;
+                    }
+
+                }
+
+                .amount-box {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+                }
+            }
+        }
+    }
+}

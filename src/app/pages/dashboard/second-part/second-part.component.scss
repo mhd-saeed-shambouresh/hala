@@ -1,0 +1,30 @@
+@use '../../../../theme/varibales' as varibales;
+
+.second-part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    width: 100%;
+    background: varibales.$color_titkes;
+    border-radius: 15px;
+    gap: 24px;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        flex: 1;
+
+        h3,
+        .regular-13 {
+            color: varibales.$color_primary;
+        }
+    }
+
+    button {
+        background: linear-gradient(90deg, #F09819 0%, #EDDE5D 100%);
+        border-radius: 15px;
+    }
+}

@@ -1,0 +1,48 @@
+.first-part {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+
+    app-card {
+        flex: 1;
+
+        .card-warrper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+
+            .title {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .actions {
+                display: flex;
+                gap: 20px;
+
+                .action {
+                    display: flex;
+                    gap: 8px;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+
+            .footer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 4px 10px 16px;
+                gap: 12px;
+                width: 100%;
+                height: 48px;
+                background: #F8FAFC;
+                border-radius: 15px;
+            }
+        }
+    }
+}

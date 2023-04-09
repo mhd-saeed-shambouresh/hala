@@ -1,0 +1,61 @@
+@use '@angular/material' as mat;
+@use './varibales' as variables;
+@use "sass:map";
+
+@include mat.core();
+
+
+$my-primary: mat.define-palette(variables.$primary, 50);
+$my-accent: mat.define-palette(variables.$accent);
+
+/* Large Title/bold 32 */
+$my-h1: mat.define-typography-level($font-family: variables.$font-family,
+    $font-weight: 700,
+    $font-size: 26px,
+    $line-height: 140%);
+/* Title 2/bold 24 */
+$my-h2: mat.define-typography-level($font-family: variables.$font-family,
+    $font-weight: 700,
+    $font-size: 24px,
+    $line-height: 140%);
+/* Large Title/bold 22 */
+$my-h3: mat.define-typography-level($font-family: variables.$font-family,
+    $font-weight: 700,
+    $font-size: 22px,
+    $line-height: 140%);
+/* Large Title/bold 21 */
+$my-h4: mat.define-typography-level($font-family: variables.$font-family,
+    $font-weight: 700,
+    $font-size: 21px,
+    $line-height: 140%);
+$medium: mat.define-typography-level($font-family: variables.$font-family,
+    $font-weight: 500,
+    $font-size: 14px,
+    $line-height: 140%);
+$regular: mat.define-typography-level($font-family: variables.$font-family,
+    $font-weight: 400,
+    $font-size: 12px,
+    $line-height: 140%);
+
+$caption: mat.define-typography-level($font-family: variables.$font-family,
+    $font-weight: 700,
+    $font-size: 12px,
+    $line-height: 140%);
+
+$my-typography: map.merge(mat.define-typography-config($font-family: variables.$font-family,
+      $headline-5: $my-h1,
+      $headline-6: $my-h2,
+      $subtitle-1: $my-h3,
+      $body-1	: $my-h4,
+    ),
+    ("medium": $medium,
+      "regular": $regular,
+      "caption": $caption,
+    ));
+
+
+$my-theme: mat.define-light-theme((color: (primary: $my-primary,
+        accent: $my-accent,
+      ),
+      density: 0,
+    ));

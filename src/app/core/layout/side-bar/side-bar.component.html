@@ -1,0 +1,13 @@
+<div class="slide-bar" [ngClass]="{toggled: !toggle}">
+  <img src="assets/images/shared/logo.svg" alt="hala-logo" class="logo" />
+  <hr />
+  <ng-container *ngFor="let menu1 of objToArray(menus); let i = index; let l = last">
+    <div class="menu" [ngClass]="{ 'no-padding': i > 0 }">
+      <a class="menu-item" *ngFor="let menuItem of menu1" [routerLink]="[menuItem.url]">
+        <app-icon [icon]="menuItem.icon" [title]="menuItem.name"></app-icon>
+        <p *ngIf="toggle" class="medium-14">{{ menuItem.name }}</p>
+      </a>
+    </div>
+    <hr *ngIf="!l" />
+  </ng-container>
+</div>

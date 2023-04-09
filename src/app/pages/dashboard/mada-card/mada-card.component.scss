@@ -1,0 +1,134 @@
+@use '../../../../theme/varibales' as varibales;
+
+.box {
+    width: 358px;
+    border: 1px solid #F1F5F9;
+    border-left: 5px solid ;
+    border-radius: 12px;
+    padding: 8px 16px;
+    display: flex;
+    gap: 8px;
+
+    .card-detail {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .card-title {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            .regular-13 {
+                font-weight: 700;
+            }
+        }
+
+        .balance {
+            display: flex;
+            flex-direction: column;
+            width: min-content;
+
+            .balance-amount {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 140%;
+
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .card-img {
+        width: 124px;
+        padding: 4px;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+
+        .bank-card {
+            width: 116px;
+            background: linear-gradient(110.08deg, #FFD100 -3.45%, #EAB600 106.83%);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 8px;
+
+            .bank-card-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-inline-start: 8px;
+                padding-inline-end: 8px;
+
+                .logo {
+                    width: 33px;
+                }
+
+                .sign {
+                    width: 11px;
+                }
+
+            }
+
+            .logos {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 7.5px 2px;
+
+                .logo {
+                    display: flex;
+                    gap: 2.5px;
+
+                    img {
+                        width: 6.5px;
+
+                        &.nfc {
+                            width: 15.6px;
+                            height: 12px;
+                        }
+
+                        &.mada {
+                            width: 26.13px;
+                        }
+                    }
+
+                }
+
+            }
+
+            .footer {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 8px;
+
+                .number {
+                    font-family: OCR;
+                    font-size: 11px;
+                    font-weight: 400;
+                    color: varibales.$color_accent;
+                }
+            }
+        }
+
+        .validity {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .label {
+                font-size: 9px;
+            }
+
+            .bold {
+                font-size: 11px;
+                font-weight: 600;
+            }
+        }
+    }
+}

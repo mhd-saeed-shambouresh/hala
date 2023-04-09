@@ -1,0 +1,20 @@
+.cards {
+    width: 390px;
+    height: 100%;
+
+    .title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0px;
+
+    }
+
+    .cards-warpper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+}
